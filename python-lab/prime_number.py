@@ -21,12 +21,10 @@ def checkPrime(n) :
     return True
   
   
-if (isPrime(11)) : 
-    print(" true") 
+in_number = input("Enter Number to check Prime\n")
+is_prime = isPrime(int(in_number))
+
+if (is_prime) : 
+    print("{} is Prime Number".format(in_number)) 
 else : 
-    print(" false") 
-      
-if(isPrime(15)) : 
-    print(" true") 
-else :  
-    print(" false")
+    print("{} is not a Prime Number".format(in_number))
