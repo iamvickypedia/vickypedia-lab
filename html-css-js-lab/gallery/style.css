@@ -1,0 +1,26 @@
+*{
+	margin:0;
+	padding:10px;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+.title{
+	text-align: center;
+	font-size:5rem;
+	font-weight:600;
+	color:#30cfd0;
+}
+.gallery{
+	display: grid;
+	grid-template-columns: repeat(3,minmax(400px,1fr));
+	grid-gap:20px;
+	justify-content: center;
+}
+img{
+	width:100% ;
+	transition: all 1s; 
+	z-index: 1;
+}
+img:hover{
+	transform: scale(1.1);
+}
