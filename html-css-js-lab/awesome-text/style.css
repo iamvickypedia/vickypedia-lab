@@ -1,0 +1,96 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+}
+body{
+	font-family: Open Sans;
+	background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color:green;
+}
+.title{
+	text-align: center;
+	font-size:5rem;
+	font-weight: 600;
+	font-family: Charm;
+	text-shadow: 5px 5px rgba(0,0,0,0.2);
+}
+
+.card-wrapper{
+	display: grid;
+	grid-template-columns: repeat(auto-fit,400px);
+	padding-top: 20px;
+	justify-content: center;
+}
+.card-wrapper .card{
+	color:black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding:10px;
+	margin:10px;
+	min-height: 250px;
+	min-width: 300px;
+	border-radius: 10px;
+	background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.card .card-head{
+	font-size:2rem;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+.card .card-sub{
+	font-size:1.5rem;
+	letter-spacing: 2px;
+}
+
+/*Fonts*/
+.raleway{
+	font-family: Raleway;
+}
+.lato{
+	font-family: Lato;
+}
+.kaushan{
+	font-family: Kaushan Script;
+}
+.oswald{
+	font-family:Oswald	
+}
+.playfair{
+	font-family:Playfair Display
+}
+.source-sans{
+	font-family:Source Sans Pro
+}
+.merriweather{
+	font-family:Merriweather
+}
+.montserrat{
+	font-family:Montserrat
+}
+.elsie{
+	font-family:Elsie
+}
+.roboto{
+	font-family:Roboto
+}
+.abril{
+	font-family:Abril Fatface
+}
+.sansita{
+	font-family:Sansita;
+}
+.open-sans{
+	font-family:Open Sans;
+}
+.slabo{
+	font-family:"Slabo 27px";
+}
+.charm{
+	font-family:Charm;
+}
