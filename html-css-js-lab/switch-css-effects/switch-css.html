@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Switch Css Effects</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body class="day">
+		<!-- <input type="checkbox" checked id="day-night" name=""> -->
+		<input type="checkbox" checked id="day-night" />
+		<label for="day-night">
+			<div id="a">
+				<div id="c1"></div>
+				<div id="c2"></div>
+				<div id="c3"></div>
+			</div>
+		</label>
+		<script type="text/javascript">
+			var check_box = document.getElementById("day-night")
+			var body = document.querySelector('body')
+			check_box.addEventListener('click',function(e){
+				console.log(e.target.checked)
+				if(e.target.checked){
+					body.classList.remove('night')
+					body.classList.add('day')
+				}else{
+					body.classList.remove('day')
+					body.classList.add('night')
+				}
+			})
+		</script>
+	</body>
+</html>
