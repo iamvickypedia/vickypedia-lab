@@ -1,12 +1,16 @@
 import time, sys, os, math, random
 
 text = input("Enter Text\n")
-
+s = input("Enter the effect timeout\t")
 v = chr(random.randint(65,90))
-s = 5*10
+s = int(s)
+s = s*10
 
 def get_shuffled_txt(text,se):
 	temp = ""
+	length = len(text)
+	brk = math.ceil(se/s * length)
+
 	for a_text in text:
 		if a_text.isalpha():
 			temp += chr(random.randint(65,90))
@@ -16,7 +20,7 @@ def get_shuffled_txt(text,se):
 	if se == s-1:
 		return text.upper()
 	else:
-		return temp
+		return text[:brk].upper() + temp[brk:]
 
 os.system('setterm -cursor off')
 for i in range(s):
