@@ -1,6 +1,6 @@
 #This is an optimised function to check for prime number using 6k + i concept
 # we also print the milliseconds required to run this program
-import time
+import time,sys, os, math
 
 def checkPrime(n) :
     if (n <= 1) :
@@ -18,12 +18,39 @@ def checkPrime(n) :
         i = i + 6
     return True
 
+print("Welcome to the Prime Program\n")
+while True:
+    choice = input("1. Check if number is Prime \n2. Get i'th Prime number\n3. Exit\nEnter the choice number\n")
+    if choice == '1':
+        in_number = input("Enter Number to check Prime\n")
+        is_prime = checkPrime(int(in_number))
+        print("-"*10)
+        if (is_prime) :
+            print("{} is a Prime Number".format(in_number).center(50,"-"))
+        else :
+            print("{} is not a Prime Number".format(in_number))
+        print("-"*10)
 
-in_number = input("Enter Number to check Prime\n")
-st = time.time()
-is_prime = checkPrime(int(in_number))
-print('Time taken to run is {}'.format(time.time() - st))
-if (is_prime) :
-    print("{} is a Prime Number".format(in_number))
-else :
-    print("{} is not a Prime Number".format(in_number))
+    elif choice == '2':
+        in_number = input("Enter the value of i\n")
+        in_number = int(in_number)
+        counter = 0
+        st = time.time()
+        candidate = 2
+        os.system('setterm -cursor off')
+        while True:
+            print("Loading {0:.2f}%".format((counter/in_number)*100),end="\r")
+            if counter >= in_number:
+                break
+            if checkPrime(candidate):
+                # print("candidate",candidate,"counter",counter)
+                counter += 1
+            candidate += 1
+        os.system('setterm -cursor on')
+        print("\n"+"-"*10)
+        print("The Prime number at {} place is {}".format(in_number,candidate-1))
+        print("-"*10)
+        print('Time taken to search the Prime number is {}\n'.format(time.time() - st))
+    else:
+        print("Thank you for your interest")
+        break

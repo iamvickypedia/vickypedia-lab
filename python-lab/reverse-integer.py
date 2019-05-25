@@ -1,7 +1,8 @@
 def reverse_int(inp):
 	newnum = 0
-	if type(inp) == int:
-		digits = len(str(inp))
+	if inp.isdigit():
+		digits = len(inp)
+		inp = int(inp)
 		for i in range(1,digits+1):
 			count = inp%(10**i)
 			inp -= count
@@ -13,5 +14,5 @@ def reverse_int(inp):
 
 if '__main__' == __name__:
 	num = input("Enter the Number to get the reverse \n")
-	print(reverse_int(int(num)))
+	print(reverse_int(num))
 	
