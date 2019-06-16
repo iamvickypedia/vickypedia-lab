@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radial</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<tag>made by vickypedia</tag>
+	<div class="five">
+		<div class="four">
+			<div class="three">
+				<div class="two">
+					<div class="one"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var clicks = 0
+		window.onload = function(){
+			clickEvent()
+		}
+		var body = document.querySelector('body')
+		var root = document.documentElement;
+		var colors = [
+			{
+				one:'#ff9999',
+				two:'#ff7b7b',
+				three:'#ff5252',
+				four:'#ff0000',
+				five:'#a70000',
+				body:'#650000',
+			},
+			{
+				one:'#5656fd',
+				two:'#3434ff',
+				three:'#2020e0',
+				four:'#0000ab',
+				five:'#000094',
+				body:'#00004b',
+			},
+			{
+				one:'#89f992',
+				two:'#34ff44',
+				three:'#20e04c',
+				four:'#00ab03',
+				five:'#199400',
+				body:'#0d4b00',
+			},
+			{
+				one:'#f7f989',
+				two:'#f2ff34',
+				three:'#dae020',
+				four:'#aba300',
+				five:'#948d00',
+				body:'#757004',
+			}
+		]
+		body.addEventListener('click',clickEvent)
+		function get_choice(arr){
+			// var index = Math.floor(Math.random()*arr.length)
+			var index = clicks%arr.length
+			clicks++
+			return arr[index]
+		}
+		function clickEvent(){
+			root_obj = get_choice(colors)
+			root.style.setProperty('--color-one',root_obj.one)
+			root.style.setProperty('--color-two',root_obj.two)
+			root.style.setProperty('--color-three',root_obj.three)
+			root.style.setProperty('--color-four',root_obj.four)
+			root.style.setProperty('--color-five',root_obj.five)
+			root.style.setProperty('--color-body',root_obj.body)
+		}
+	</script>
+</body>
+</html>
