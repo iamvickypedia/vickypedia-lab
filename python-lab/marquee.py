@@ -7,7 +7,7 @@ def startm(sent,delay):
         if i <= start:
             c= "\r{}{}".format(sent[i:]," "*i)
         elif i > start:
-            c="\r{}{}".format(" "*(start-(i-start)),sent[:i-start])
+            c="\r{}{}".format(" "*(start-(i%start)),sent[:i%start])
         sys.stdout.write(c)
         sys.stdout.flush()
         time.sleep(0.1)
