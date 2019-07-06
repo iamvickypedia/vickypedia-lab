@@ -48,7 +48,7 @@ result = get_final_data(result,pivot=pivot,rev=rev)
 print('----RESULT----')
 print('--letter percentages are as follows --')
 for k,v in result:
-    print(k, " : ",v)
+    print(f" {k} : {v :.2f} %")
 
 
 
