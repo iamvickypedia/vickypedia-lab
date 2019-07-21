@@ -1,9 +1,0 @@
-start using command
-docker-compose up -d
-
--d for starting in background
-and you can stop mysql using command
-docker-compose down
-this wont delete your mysql data, if you want to delete mysql data and start fresh you can run
-docker-compose down -v 
--v for taking down volume too
