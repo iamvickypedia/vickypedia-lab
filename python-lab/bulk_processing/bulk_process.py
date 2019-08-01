@@ -1,20 +1,23 @@
-import time,os,sys
-sys.path.append('..')
-from letter_count import process,formatter
+import time, os, sys
+
+sys.path.append("..")
+from letter_count import process, formatter
 from collections import Counter
-from string import ascii_lowercase as ascii_l
+from string import ascii_uppercase as ascii_u
+
+
 def main():
-    file_handler = open('clean.txt','r')
+    file_handler = open("data.txt", "r")
     data = file_handler.readlines()
-    #data = ['yolo','here there']
+    # data = ['yolo','here there']
     file_handler.close()
     result = {}
     start = time.time()
     for sent in data:
-        if sent.strip() != '':
+        if sent.strip() != "":
             res = process(sent)
             result = dict(Counter(res) + Counter(result))
-    for a in ascii_l:
+    for a in ascii_u:
         if a not in result.keys():
             result[a] = 0
     print(result)
@@ -22,8 +25,9 @@ def main():
     print(f"Total letters are {sum(list(result.values()))}")
     result = formatter(result)
     for kv in result:
-        k,v = kv
+        k, v = kv
         print(f"{k} is {v:.2f} %")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
