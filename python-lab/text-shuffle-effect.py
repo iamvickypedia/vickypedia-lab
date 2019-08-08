@@ -1,7 +1,8 @@
 import time, sys, os, math, random
 
 text = input("Enter Text\n")
-s = input("Enter the effect timeout\t")
+#s = input("Enter the effect timeout\t")
+s = 5
 v = chr(random.randint(65,90))
 s = int(s)
 s = s*10
