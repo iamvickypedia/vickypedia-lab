@@ -12,4 +12,3 @@ caller = lambda x : globals()[x]()
 
 calling_str = input(' A\n B\nEnter Function Name\n')
 caller(calling_str)
-
