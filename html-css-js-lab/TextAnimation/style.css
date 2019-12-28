@@ -1,0 +1,32 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background: black;  /* fallback for old browsers */
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+
+    color:rgb(247, 228, 228);
+}
+.animText{
+    font-family: IBM Plex Mono,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+    font-weight: bold;
+    font-size: 7rem;
+    text-transform: uppercase;
+    line-height: 100vh;
+    text-align: center;
+}
+.animText span{
+    opacity: .2;
+    display:inline-block;
+    transform: translateY(100px);
+    transition: ease all 1s;
+}
+.animText span.active{
+    color: blue;
+    transform: translateY(0px);
+    opacity: 1;
+    -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: cyan;
+}
