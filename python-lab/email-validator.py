@@ -1,11 +1,13 @@
 def check_email(s):
     try:
         username,url = s.split('@')
-        website,ext = url.split('.')
+        website = url.split('.')[0]
+        ext = url.split('.')[-1]
+
     except ValueError:
         return False
-
-    if not username.replace('-','').replace('_','').isalnum():
+    #import pdb;pdb.set_trace()
+    if not username.replace('-','').replace(".","").replace('_','').isalnum():
         return False
     if not website.isalnum():
         return False

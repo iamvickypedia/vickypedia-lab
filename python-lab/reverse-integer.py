@@ -2,7 +2,7 @@ def reverse_int(inp):
 	"""
 	This is a program which takes an intreger and reverses the number by having some calculation based operation.
 	We can also easily reverse a number by converting it to string and returning the reversed string which you can convert to number again.
-	But this is an approach circumventiung that hack.
+	But this is an approach circumventing that hack.
 	"""
 	newnum = 0
 	if inp.isdigit():

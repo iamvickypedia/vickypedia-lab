@@ -29,7 +29,7 @@ for _ in range(15):
     res = ""
     for _ in range(10):
         print(random_colour(),end="\t")
-        time.sleep(0.5)
+        time.sleep(0.05)
         #res += random_colour()
         
     print()

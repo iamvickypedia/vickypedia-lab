@@ -1,9 +1,10 @@
 import requests,sys
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
-
-url = sys.argv[1]
-
+if len(sys.argv) > 1:
+    url = sys.argv[1]
+else:
+    url = input("Enter the url to get info : ")
 response = requests.get(url)
 soup = BeautifulSoup(response.text,features="html.parser")
 metas = soup.find_all('meta')

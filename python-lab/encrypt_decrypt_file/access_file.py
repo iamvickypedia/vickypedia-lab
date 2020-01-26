@@ -7,6 +7,7 @@ parser.add_argument(dest='myMode',nargs='*')
 args = parser.parse_args()
 magic = "Ac3s$F!L3"
 params = args.myMode
+filename = None
 # import pdb;pdb.set_trace()
 if args.myMode and len(params) > 0:
     filename, *myMode = params
@@ -19,6 +20,11 @@ if args.myMode and len(params) > 0:
         myMode = myMode[0]
 else:
     myMode = None
+
+if filename is None:
+    filename = input("Enter filename : ")
+    myMode = "status"
+
 def write_to_file(outputFilename,translated,mode):
     outputFileObj = open(outputFilename, 'w')
     if mode == 'close':
@@ -32,9 +38,10 @@ def get_status(content):
     else:
         return 'closed'
 
-def main():
+def main(filename):
     global myMode
     Filename = 'credsninfo.txt'
+    Filename = filename
 
     if not myMode:
         myMode = 'status'
@@ -74,5 +81,4 @@ def main():
     print(f'{Filename} is now {myMode}')
 
 if __name__ == '__main__':
-    pass
-    main()
+    main(filename)

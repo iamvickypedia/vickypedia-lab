@@ -38,5 +38,6 @@ def randomly():
 
 choice = input('1. Enter the array Elements manually\n2. Randomly generate an array and sort it\n')
 choices = {1:manually,2:randomly}
+choice = choice if choice else 2
 c = choices.get(int(choice),"Wrong input")()
 

@@ -11,7 +11,7 @@ def working(n,ind=0):
 sleeping_time = 5
 no_of_workers = 50
 pool = ThreadPool(sleeping_time)
-pool.map(working,[5,5,5,5,5,5,5,5,5,5,5,5,5])
+pool.map(working,[5]*no_of_workers)
 pool.close()
 pool.join()
 for i in range(no_of_workers):
