@@ -1,0 +1,66 @@
+:root {
+    --spread: 16px;
+    --inner-spread: 8px;
+    --offset: 6px;
+    --effect-opacity: 0.1;
+}
+
+body {
+    background-color: #0071a4;
+    color: white;
+    font-family: sans-serif;
+}
+
+
+div {
+    border-radius: 30px;
+    transition: all .5s ease-in-out;
+}
+
+.margin-32 {
+    margin: 32px;
+}
+
+.bump-out {
+    padding: 16px;
+}
+.bump-out {
+    box-shadow: 
+        calc(0px - var(--offset)) calc(0px - var(--offset)) var(--spread) 0 rgba(255,255,255,var(--effect-opacity)),
+        var(--offset) var(--offset) var(--spread) 0 rgba(0,0,0,var(--effect-opacity));
+}
+
+.bubble-out {
+    padding: 16px;
+}
+.bubble-out {
+    box-shadow: 
+        calc(0px - var(--offset)) calc(0px - var(--offset)) var(--spread) 0 rgba(255,255,255,var(--effect-opacity)),
+        var(--offset) var(--offset) var(--spread) 0 rgba(0,0,0,var(--effect-opacity)),
+        inset calc(0px - var(--offset)) calc(0px - var(--offset)) var(--inner-spread) 0 rgba(0,0,0,var(--effect-opacity)),
+        inset var(--offset) var(--offset) var(--inner-spread) 0 rgba(255,255,255,var(--effect-opacity));
+}
+
+.bubble-in {
+    padding: 16px;
+}
+.bubble-in {
+    box-shadow: 
+        calc(0px - var(--offset)) calc(0px - var(--offset)) var(--spread) 0 rgba(0,0,0,var(--effect-opacity)),
+        var(--offset) var(--offset) var(--spread) 0 rgba(255,255,255,var(--effect-opacity)),
+        inset calc(0px - var(--offset)) calc(0px - var(--offset)) var(--inner-spread) 0 rgba(255,255,255,var(--effect-opacity)),
+        inset var(--offset) var(--offset) var(--inner-spread) 0 rgba(0,0,0,var(--effect-opacity));
+}
+
+
+.bump-ridge {
+    padding: 16px;
+}
+.bump-ridge {
+    box-shadow: 
+        calc(0px - var(--offset)) calc(0px - var(--offset)) var(--spread) 0 rgba(255,255,255,var(--effect-opacity)),
+        var(--offset) var(--offset) var(--spread) 0 rgba(0,0,0,var(--effect-opacity)),
+        inset calc(0px - var(--offset)) calc(0px - var(--offset)) var(--inner-spread) 0 rgba(255,255,255,calc(var(--effect-opacity)/2)),
+        inset var(--offset) var(--offset) var(--inner-spread) 0 rgba(0,0,0,var(--effect-opacity));
+}
+
