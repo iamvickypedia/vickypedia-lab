@@ -26,7 +26,7 @@ def startm(sent):
         
         sys.stdout.write(c)
         sys.stdout.flush()
-        time.sleep(0.1)
+        time.sleep(1/30)
         i = i + 1
 
 
